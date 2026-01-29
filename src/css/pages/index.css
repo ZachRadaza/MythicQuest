@@ -1,0 +1,160 @@
+main{
+    display: grid;
+    flex-direction: column;
+}
+
+#video-bg, article{
+    grid-area: 1 / 1;
+}
+
+#video-bg{ 
+    z-index: 0; 
+    width: 100vw;
+    height: auto;
+}
+
+article{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+section.hero{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 80vh;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.hero .mythic-quest-logo{
+    width: 50%;
+    height: auto;
+}
+
+.hero-words{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+.hero-words h2, .hero-words p{
+    text-align: center;
+    color: var(--color-bg);
+}
+
+.hero-btns{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.hero-btns button{
+    all: unset;
+    border: 0.1rem solid var(--color-accent);
+    color: var(--color-accent);
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.hero-btns .btn-purchase{
+    background: var(--color-primary);
+    border: 0.1rem solid var(--color-primary-lite);
+}
+.hero-btns .btn-purchase:hover{ background: var(--color-primary-lite); }
+
+.hero-btns .btn-learn:hover{
+    background: var(--color-secondary);
+    border: 0.1rem solid var(--color-secondary);
+    color: var(--color-primary);
+}
+
+section.news{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        var(--color-primary) 30%
+    );
+}
+
+.news-header{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding: 1rem 4rem;
+    align-items: center;
+}
+
+.news-header h3{ color: var(--color-bg); }
+
+.news-header button{
+    all: unset;
+    background: transparent;
+    padding: 1rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+}
+
+.news-header button:hover{ color: var(--color-accent); }
+
+.news-card-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.news-card{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 20vw;
+    margin: 1rem;
+    border: 0.1rem solid var(--color-secondary);
+    background: var(--color-primary-lite);
+    overflow: hidden;
+}
+
+.news-card:hover{ border: 0.1rem solid var(--color-accent); }
+.news-card:hover .news-img{ transform: scale(1.05); }
+.news-card:hover div{ border-top: 0.1rem solid var(--color-accent); }
+
+.news-card .news-img{
+    width: auto;
+    height: fit-content;
+    aspect-ratio: 16/9;
+    z-index: 1;
+}
+
+.news-card div{
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary-lite);
+    padding: 1rem;
+    justify-content: space-between;
+    height: 100%;
+    border-top: 0.1rem solid var(--color-secondary);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.news-title{
+    color: var(--color-secondary);
+}
+
+.news-date{
+    color: var(--color-accent);
+}
