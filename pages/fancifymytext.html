@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fancify Shamcify</title>
+
+		<script src="../src/js/pages/fancifymytext.js" defer></script>
+		<link rel="stylesheet" href="../src/css/styles.css">
+		<link rel="stylesheet" href="../src/css/pages/fancifymytext.css">
+	</head>
+
+	<body>
+		<h1>Fancify my Text</h1>
+
+		<!-- Your UI controls go here -->
+		<div class="fancify-cont">
+			<div>
+				<h4>Text</h4>
+				<textarea id="fancy-textarea" rows="4" cols="30" placeholder="Text"></textarea>
+			</div>		
+			<div>
+				<h4>Fancify</h4>
+				<div class="fancify-controls">
+					<div class="btn-cont">
+						<button id="bigger-btn" type="button">Bigger</button>
+						<button id="moo-btn" type="button">Moo</button>
+					</div>
+					<div class="btn-cont">
+						<div class="radio-btn">
+							<input id="fancy-btn" type="radio" name="fancify" onclick="radioBtnClicked(true)">
+							<h6>Fancify</h6>
+						</div>			
+						<div class="radio-btn">
+							<input id="boring-btn" type="radio" name="fancify" onclick="radioBtnClicked(false)">
+							<h6>BoringBetty</h6>
+						</div>		
+					</div>
+				</div>	
+			</div>
+		</div>
+	</body>
+</html>
