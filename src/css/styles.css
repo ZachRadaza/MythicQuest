@@ -39,11 +39,11 @@ p{
     font-size: 1rem;
     font-family: var(--font-body);
     color: var(--color-text);
-    max-width: 60ch;
     font-weight: 500;
     padding: 0px; 
     margin: 0px; 
     line-height: 1.5;
+    max-width: 70ch;
 }
 
 button{
@@ -69,6 +69,7 @@ button.btn-emphasis{
     font-size: 1.5rem;
     padding: 1rem;
     cursor: pointer;
+    text-transform: uppercase;
     transition: background 200ms ease-in, border 200ms ease-in, color 200ms ease-in, transform 100ms ease;
 }
 
@@ -223,16 +224,18 @@ header .left-header, header .right-header{
 }
 
 footer{
-    background: var(--color-text);
     align-items: center;
     justify-content: center;
-    border: 0.1rem solid var(--color-secondary);
+    background-image: url("https://img.freepik.com/free-photo/brown-concrete-wall-with-scratches_53876-129736.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: cover;
+    background-position: center;
+    border-top: 0.1rem solid var(--color-secondary);
 }
 
 footer h3{
     width: 100%;
     text-align: center;
-    padding: 2rem 0px;
+    padding: 2rem 0px 0px 0px;
     color: var(--color-secondary);
 }
 
@@ -242,7 +245,7 @@ footer .svgs-cont{
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    margin: 2rem;
+    margin: 1rem 1rem 3rem 1rem;
 }
 
 footer .svgs-cont a{ all: unset; }

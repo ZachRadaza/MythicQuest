@@ -1,0 +1,331 @@
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+.dark-bg::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.9)), 
+        url("https://wow.zamimg.com/uploads/blog/images/17323-one-map-to-rule-them-all-classic-azeroth-detailed-map-edit-by-rhianolord.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    filter: grayscale(100%);
+}
+
+.dark-bg >*{
+    position: relative;
+    z-index: 1;
+}
+
+section.hero{
+    position: relative;
+    background-image: url("https://images4.alphacoders.com/137/1374852.png");
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(30%);
+    height: 100vh;
+    width: 100%;
+    transition: all 100ms ease;
+}
+
+section.hero:has(button:hover), 
+section.hero:has(a:hover),
+section.hero:has(.about-card:hover){
+    filter: grayscale(0%);
+}
+
+.hero-grid{
+    position: relative;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: fit-content;
+    margin: auto;
+    gap: 2rem;
+}
+
+.download-cont{
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.download-cont a{ all: unset; }
+
+.download-cont >div{
+    display: flex;
+    flex-direction: column;
+    color: var(--color-bg);
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.download-cont .hero-mq-title{ font-size: 6rem; }
+
+.download-cont p{
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+.hero-divider{
+    border-bottom: 0.1rem solid var(--color-secondary);
+    width: 100%;
+}
+.hero-divider p{ opacity: 0; }
+
+.return-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 0.8rem;
+    text-align: center;
+    color: var(--color-bg);
+}
+
+.return-cont a{
+    color: var(--color-accent);
+    cursor: pointer;
+}
+
+.return-cont a:hover{ text-decoration: underline; }
+
+section.about{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    padding: 88px 0px;
+}
+
+.about p{ color: var(--color-secondary); }
+
+.about-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+    gap: 2rem;
+    width: 100%;
+}
+
+.about-title{ color: var(--color-bg); }
+
+.about-desc{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    align-items: center;
+}
+
+.about-card-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.about-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 23vw;
+    gap: 1rem;
+}
+
+.about-card img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    border: 0.2rem solid var(--color-text);
+}
+
+.about-card div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+}
+
+.about-card div h6{ 
+    font-size: 1.2rem; 
+    color: var(--color-accent); 
+}
+
+section.housing{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    background-image: url("https://oyster.ignimgs.com/mediawiki/apis.ign.com/assassins-creed-vikings/b/b0/Wea23.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.housing >div{
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+    justify-content: left;
+    color: var(--color-bg);
+    max-width: 70ch;
+    margin: 8rem 2rem;
+    gap: 1rem;
+}
+
+.housing >div p{ color: var(--color-bg); }
+.housing >div h6{ color: var(--color-secondary); }
+.housing >div a{ all: unset; }
+
+.housing >div button{ 
+    width: fit-content; 
+    background: var(--color-primary);
+    border: 0.1rem solid var(--color-primary-lite);
+    margin-top: 1rem;;
+}
+
+.housing >div button:hover{
+    background: var(--color-primary-lite);
+    color: var(--color-secondary);
+    border: 0.1rem solid var(--color-primary-lite);
+}
+
+
+section.faq{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    color: var(--color-bg);
+    padding: 88px 0px;
+}
+
+.faq-title{ text-align: center; }
+.faq-browse-title{ 
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 50%; 
+    margin: auto;
+    color: var(--color-secondary);
+}
+
+.faq-browse-title::before,
+.faq-browse-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-secondary);
+}
+
+.faq-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 60%;
+}
+
+.faq-cont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.faq-cont h6{ font-size: 1.1rem; }
+
+.faq-topic{
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary-lite);
+    border: 2px solid var(--color-primary);
+    border-radius: var(--card-radius);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.faq-topic.opened .faq-topic-heading h6,
+.faq-topic.opened .faq-topic-heading p{
+    color: var(--color-accent);
+}
+
+.faq-topic:hover{ background: var(--color-primary); }
+.faq-title:active{ transform: translateY(2px); }
+
+.faq-topic p{ color: var(--color-bg); }
+
+.faq-topic-heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.faq-topic-heading h6,
+.faq-topic-heading p{
+    color: var(--color-secondary);
+    transition: all 200ms ease;
+}
+
+.faq-drop-down{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 200ms ease-in;
+}
+
+.faq-drop-down.opened{
+    max-height: 100%;
+    opacity: 1;
+}
+
+.qa-cont::after{
+    content: "";
+    background: var(--color-secondary);
+    width: 100%;
+    height: 1px;
+    margin: 2.5rem 0px 0px 0px;
+    padding: 0px;
+    justify-self: center;
+    justify-items: center;
+}
+
+.qa-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem 0rem 1rem;
+}
+
+.qa-cont h6{ color: var(--color-secondary); }
+.qa-cont p{ 
+    color: var(--color-bg); 
+    max-width: 100%;
+}

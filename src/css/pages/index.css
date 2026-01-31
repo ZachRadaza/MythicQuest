@@ -55,6 +55,8 @@ section.hero{
     gap: 2rem;
 }
 
+.hero-btns a{ all: unset; }
+
 .hero-btns .btn-purchase{
     background: var(--color-primary);
     border: 0.1rem solid var(--color-primary-lite);
